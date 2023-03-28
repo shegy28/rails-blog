@@ -27,7 +27,7 @@ After you're finished please remove all the comments and instructions!
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[OOP-school-library\] ](#-OOP-school-library-)
+- [📖 \[rails-blog\] ](#-rails-blog-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -44,8 +44,8 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [OOP-school-library] <a name="about-project"></a>
-An app that was built with Ruby using OOP principles. The app allow you to add new students, teachers, books and save records of who borrowed a given book and when.
+# 📖 [rails-blog] <a name="about-project"></a>
+This application is designed to function as a classic blog website, with features such as the ability to display a list of blog posts and enable readers to interact with them by adding comments and liking posts. With the Rails-blog repository, users can create and customize their own fully functional blog website quickly and easily.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -54,7 +54,15 @@ An app that was built with Ruby using OOP principles. The app allow you to add n
 <details>
 <summary>Server</summary>
   <ul>
+    <li><a href="https://rubygems.org/">PostgresSQL</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Stack</summary>
+  <ul>
     <li><a href="https://rubygems.org/">Ruby</a></li>
+    <li><a href="https://rubygems.org/">RoR</a></li>
   </ul>
 </details>
 
@@ -62,9 +70,9 @@ An app that was built with Ruby using OOP principles. The app allow you to add n
 
 ### Key Features <a name="key-features"></a>
 
-- **[Save records of who borrowed a given book and when]**
-- **[Add new students or teachers]**
-- **[Add new books]**
+- **[Fully functional website]**
+- **[Show the list of posts]**
+- **[Add comments and liking posts]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,7 +104,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd your-folder
-  git@github.com:shegy28/OOP-school-library.git
+  git@github.com:shegy28/rails-blog.git
 ```
 
 ### Install
@@ -110,7 +118,7 @@ Install this project with:
 
 ### Usage
 
-- The project can be used as a tool to record what books are in the library and who borrows them.
+- The project can be used as a tool to create blog posts and gets like and comments from users.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,9 +139,9 @@ Install this project with:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[query and update animals table]**
-- [ ] **[query multiple tables]**
-- [ ] **[add "join table" for visits]**
+- [ ] **[A login page]**
+- [ ] **[Ability to follow and Author]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +151,7 @@ Install this project with:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/shegy28/OOP-school-library/issues).
+Feel free to check the [issues page](https://github.com/shegy28/rails-blog/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
