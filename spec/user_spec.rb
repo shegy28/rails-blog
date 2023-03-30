@@ -11,7 +11,6 @@ RSpec.describe User, type: :model do
   end
   before { subject.save }
 
-
   it 'is valid with valid attributes' do
     expect(subject).to be_valid
   end
