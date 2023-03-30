@@ -117,7 +117,10 @@ Install this project with:
 <!-- AUTHORS -->
 ## 👥 Authors <a name="authors"></a>
 
+
+
 👤 **Chimezie Asouzu**
+
 
 - GitHub: [@Shegy28](https://github.com/shegy28)
 - Twitter: [@Shegy28](https://twitter.com/twitterhandle)
@@ -128,8 +131,6 @@ Install this project with:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[A login page]**
 - [ ] **[Ability to follow and Author]**
