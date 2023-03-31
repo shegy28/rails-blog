@@ -76,11 +76,6 @@ This application is designed to function as a classic blog website, with feature
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -122,7 +117,10 @@ Install this project with:
 <!-- AUTHORS -->
 ## 👥 Authors <a name="authors"></a>
 
+
+
 👤 **Chimezie Asouzu**
+
 
 - GitHub: [@Shegy28](https://github.com/shegy28)
 - Twitter: [@Shegy28](https://twitter.com/twitterhandle)
@@ -133,8 +131,6 @@ Install this project with:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[A login page]**
 - [ ] **[Ability to follow and Author]**
