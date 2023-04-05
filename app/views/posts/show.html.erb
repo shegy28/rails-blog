@@ -1,1 +1,22 @@
 <h1>Show a particular post</h1>
+
+<div class= "user-details gap" >
+            <div class="post">
+                <div>
+                    <h4> Post #<%= @post.id %> by <%= @user.name %> </h4>
+                    <%= @post.text%>
+                    <h6>Comments:<%= @post.comments_counter %>, Likes:<%= @post.likes_counter %> </h6>
+                </div>
+
+                <div class="post-comments">
+                    <h4> Comments </h4>
+                    <% @post.comments.each do |comment| %>
+                        <p>
+                            <strong><%= comment.author.name %>:</strong>
+                            <span><%= comment.text %></span>
+                        </p>
+                    <%end%>
+                </div>
+            </div>  
+
+</div>

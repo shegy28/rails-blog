@@ -1,1 +1,46 @@
 <h1>List of all posts</h1>
+
+<div class= "user-details gap" >
+    <div class = "user ">
+        <div class = "userphoto">
+            <% if @user.photo %>
+                <img src="<%= @user.photo %>" >
+            <% else %>
+                <p> No image found </p>
+            <% end %>
+        </div>
+
+        <div class = "username">
+                <h2 ><%= @user.name %></h2>
+                <p> Number of posts: <%= @user.posts_counter %> </p>
+        </div>
+    </div>
+    <% counter = 1 %>
+    
+    <% @user.posts.each do |post| %>
+        <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> >
+            <div class="post">
+                <div>
+                    <h4>Post #<%= counter %></h4>
+                    <%= post.text%>
+                    <h6>Comments:<%= post.comments_counter %>, Likes:<%= post.likes_counter %> </h6>
+                </div>
+
+                <div class="post-comments">
+                    <h4> Comments </h4>
+                    <%post.recent_comments.each do |comment|%>
+                        <p>
+                            <strong><%= comment.author.name %>:</strong>
+                            <span><%= comment.text %></span>
+                        </p>
+                    <%end%>
+                </div>
+            </div>
+        </a>    
+        <% counter += 1 %>
+    <%end%>
+    
+    
+
+    
+</div>
