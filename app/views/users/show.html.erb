@@ -1,1 +1,36 @@
 <h1>Show a particular user</h1>
+
+<div class= "user-details" >
+    <div class = "user">
+        <div class = "userphoto">
+            <% if @user.photo %>
+                <img src="<%= @user.photo %>" >
+            <% else %>
+                <p> No image found </p>
+            <% end %>
+        </div>
+
+        <div class = "username">
+                <h2 ><%= @user.name %></h2>
+                <p> Number of posts: <%= @user.posts_counter %> </p>
+        </div>
+    </div>
+
+    <div class = "bio">
+        <h4>Bio</h4>
+        <p> <%= @user.bio %> </p>
+    </div>
+
+    <% counter = 1 %>
+    <% @user.recent_posts.each do |post| %>
+        <div class = "eachpost">
+            <h4>Post #<%= counter %></h4>
+            <p><%= post.text %></p>
+            <% counter += 1 %>
+            <h6>Comments:<%= post.comments_counter %> Likes:<%= post.likes_counter %> </h6>
+        </div>
+    <% end %>
+    <a href="<%= url_for(user_posts_path(@user)) %>" class="button" >
+        <button> See all posts </button>
+    </a>
+</div>
