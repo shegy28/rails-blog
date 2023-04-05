@@ -1,1 +1,27 @@
-<h1>List of all users</h1>
+<div>
+    <h1>List of all users</h1>
+</div>
+
+<ul> 
+    <% @users.each do |user| %>
+        <li class= "user" >
+                <div class = "userphoto">
+                    <% if user.photo %>
+                        <img src="<%= user.photo %>" >
+                    <% else %>
+                        <p> No image found </p>
+                    <% end %>
+                </div>
+
+                
+                    <div class = "username">
+                        <a href="<%= url_for(user_path(user)) %>" >
+                            <h2 ><%= user.name %></h2>
+                            <p> Number of posts: <%= user.posts_counter %> </p>
+                        </a>
+                    </div>
+        </li>
+    <% end %>
+</ul>
+
+
