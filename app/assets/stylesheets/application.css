@@ -109,3 +109,19 @@ a {
   display: flex;
   gap: 30px;
 }
+
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
