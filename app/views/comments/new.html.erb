@@ -1,0 +1,13 @@
+<section>
+  <h2>Add a comment</h2>
+  <%= form_with model: @comment, url: user_post_comments_path(@post) do |form| %>
+
+    <div>
+      <%= form.label :text %>
+      <%= form.text_field :text, required: true, autofocus: true, placeholder: 'Leave a comment', class: 'form-input' %>
+    </div>
+
+    <%= form.submit "Comment" %>
+
+  <% end %>
+</section>
