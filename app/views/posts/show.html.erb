@@ -8,6 +8,12 @@
                     <h6>Comments:<%= @post.comments_counter %>, Likes:<%= @post.likes_counter %> </h6>
                 </div>
 
+                <div>
+                    <%= form_with model: @like, url:  user_post_likes_path(@user, @post) do |form|%>
+                        <%= form.submit 'Like post', class: 'submit' %>
+                    <%end%>
+                </div>
+
                 <div class="post-comments">
                     <h4> Comments </h4>
                     <% @post.comments.each do |comment| %>
@@ -18,5 +24,9 @@
                     <%end%>
                 </div>
             </div>  
+
+            <button class="see-all-post d-flex border">
+                <%= link_to "Create new comment", new_user_post_comment_path(@user, @post) %>
+            </button>
 
 </div>
