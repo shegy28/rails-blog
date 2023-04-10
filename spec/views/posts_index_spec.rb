@@ -71,6 +71,5 @@ RSpec.describe '#UserIndex', type: :feature do
     it 'should display the number of likes of the post' do
       expect(page).to have_content(@posts.first.likes_counter)
     end
-
   end
 end

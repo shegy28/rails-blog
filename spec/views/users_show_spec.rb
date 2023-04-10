@@ -24,25 +24,25 @@ RSpec.describe UsersController, type: :controller do
     ]
   end
 
-  describe "GET #index" do
-    it "returns a success response" do
+  describe 'GET #index' do
+    it 'returns a success response' do
       get :index
       expect(response).to be_successful
     end
 
-    it "assigns @users" do
+    it 'assigns @users' do
       get :index
       expect(assigns(:users)).to eq(@users)
     end
   end
 
-  describe "GET #show" do
-    it "returns a success response" do
+  describe 'GET #show' do
+    it 'returns a success response' do
       get :show, params: { id: @user1.id }
       expect(response).to be_successful
     end
 
-    it "assigns @user" do
+    it 'assigns @user' do
       get :show, params: { id: @user1.id }
       expect(assigns(:user)).to eq(@user1)
     end
