@@ -32,12 +32,12 @@ RSpec.describe 'root page features' do
       )
     ]
 
-    visit user_posts_path(@users.first, @posts.first)
+    visit user_post_path(@users.first, @posts.first)
   end
 
   describe '#PostShowPage' do
     it 'Should display post title' do
-      expect(page).to have_content(@posts.first.title)
+      expect(page).to have_content(@post1.title)
     end
 
     it 'should display the post author' do
