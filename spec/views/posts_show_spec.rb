@@ -67,6 +67,5 @@ RSpec.describe 'root page features' do
         expect(page).to have_content(comment.body)
       end
     end
-
   end
 end

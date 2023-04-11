@@ -43,15 +43,13 @@ RSpec.describe 'root page features' do
       end
     end
     it 'redirects to user show page when clicked on user name' do
-        visit('/')
-        click_link @users.first.name
-        expect(current_path).to eq(user_path(@users.first))
-        expect(page).to have_content(@users.first.name)
-        expect(page).to have_css("img[src='#{@users.first.photo}']")
-        expect(page).to have_content(@users.first.bio)
-        expect(page).to have_content("Number of posts: #{@users.first.posts_counter}")
-      end
-      
-
+      visit('/')
+      click_link @users.first.name
+      expect(current_path).to eq(user_path(@users.first))
+      expect(page).to have_content(@users.first.name)
+      expect(page).to have_css("img[src='#{@users.first.photo}']")
+      expect(page).to have_content(@users.first.bio)
+      expect(page).to have_content("Number of posts: #{@users.first.posts_counter}")
+    end
   end
 end
