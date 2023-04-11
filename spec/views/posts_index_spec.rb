@@ -18,7 +18,7 @@ RSpec.describe '#UserIndex', type: :feature do
 
     @posts = [
       @post1 = Post.create(
-        author: @user1, title: 'List of all posts', text: 'This is my first post', comments_counter: 0, likes_counter: 0
+        author: @user1, title: 'Hello Post', text: 'This is my first post', comments_counter: 0, likes_counter: 0
       ),
       @post2 = Post.create(
         author: @user1, title: 'Football', text: 'This is my second post', comments_counter: 0, likes_counter: 0
@@ -70,6 +70,10 @@ RSpec.describe '#UserIndex', type: :feature do
 
     it 'should display the number of likes of the post' do
       expect(page).to have_content(@posts.first.likes_counter)
+    end
+
+    it 'should include a section for paginations' do
+      expect(page).to have_content('Pagination')
     end
   end
 end

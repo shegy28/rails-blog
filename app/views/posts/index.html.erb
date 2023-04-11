@@ -22,6 +22,7 @@
             <div class="post">
                 <div>
                     <h4>Post #<%= counter %></h4>
+                    <h4>Title: <%= post.title %></h4>
                     <%= post.text%>
                     <h6>Comments:<%= post.comments_counter %>, Likes:<%= post.likes_counter %> </h6>
                 </div>
@@ -40,7 +41,9 @@
         <% counter += 1 %>
     <%end%>
     
-    
+    <div>
+        <p class="pagination">Pagination</p>
+    </div>
 
     
 </div>
