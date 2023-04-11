@@ -3,7 +3,7 @@
 <div class= "user-details gap" >
             <div class="post">
                 <div>
-                    <h4> Post #<%= @post.id %> by <%= @user.name %> </h4>
+                    <h4> Post #<%= @post.id %> <%= @post.title %> by <%= @user.name %> </h4>
                     <%= @post.text%>
                     <h6>Comments:<%= @post.comments_counter %>, Likes:<%= @post.likes_counter %> </h6>
                 </div>
