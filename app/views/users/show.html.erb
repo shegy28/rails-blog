@@ -23,12 +23,16 @@
 
     <% counter = 1 %>
     <% @user.recent_posts.each do |post| %>
-        <div class = "eachpost">
-            <h4>Post #<%= counter %></h4>
-            <p><%= post.text %></p>
-            <% counter += 1 %>
-            <h6>Comments:<%= post.comments_counter %> Likes:<%= post.likes_counter %> </h6>
-        </div>
+        <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> >
+            <div class = "eachpost">
+                <h4>Post #<%= counter %></h4>
+                <p><%= post.text %></p>
+                <% counter += 1 %>
+                <h6>Comments:<%= post.comments_counter %> Likes:<%= post.likes_counter %> </h6>
+            </div>
+        </a>
+    
+
     <% end %>
     <a href="<%= url_for(user_posts_path(@user)) %>" class="button" >
         <button> See all posts </button>
