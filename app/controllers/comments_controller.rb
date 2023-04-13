@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
     @comment.author = current_user
     @comment.post = Post.find(params[:post_id])
     return unless @comment.save
+
     redirect_to user_post_path(@user, @post)
   end
 

@@ -24,6 +24,7 @@ class PostsController < ApplicationController
     @post.likes_counter = 0
     @post.comments_counter = 0
     return unless @post.save
+
     redirect_to user_posts_path
     flash[:success] = 'Post created!'
   end
