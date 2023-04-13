@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = Post.includes(:likes, :comments)
@@ -17,16 +19,20 @@ class PostsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @post = @user.posts.new(author: @user, title: params[:post][:title], text: params[:post][:text])
+    @post = Post.new(post_params)
+    @post.author = current_user
+    @post.likes_counter = 0
+    @post.comments_counter = 0
+    return unless @post.save
+    redirect_to user_posts_path
+    flash[:success] = 'Post created!'
+  end
 
-    if @post.save
-      @post.update_posts_counter
-      flash[:notice] = 'Your post was created successfully'
-      redirect_to user_post_path(@user, @post)
-    else
-      flash.alert = 'sorry, something went wrong!'
-      render :new
-    end
+  
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
