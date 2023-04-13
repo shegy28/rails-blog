@@ -13,6 +13,7 @@ gem 'sprockets-rails'
 gem 'pg', '~> 1.1'
 
 # use devise gem for authentication
+gem 'cancancan'
 gem 'devise'
 gem 'letter_opener'
 

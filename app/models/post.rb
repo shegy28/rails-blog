@@ -4,6 +4,7 @@ class Post < ApplicationRecord
   has_many :likes
 
   after_create :update_posts_counter
+  after_destroy :update_posts_counter
 
   def initialize(attributes = {})
     super
