@@ -12,6 +12,9 @@
                     <%= form_with model: @like, url:  user_post_likes_path(@user, @post) do |form|%>
                         <%= form.submit 'Like post', class: 'submit' %>
                     <%end%>
+                    <% if can? :manage, @post %>
+                         <%= button_to "Delete Post", user_post_path, method: :delete, class: "btn btn-outline-secondary" %>
+                    <% end %>
                 </div>
 
                 <div class="post-comments">
@@ -21,6 +24,9 @@
                             <strong><%= comment.author.name %>:</strong>
                             <span><%= comment.text %></span>
                         </p>
+                        <% if can? :manage, comment %>
+                          <%= button_to "Delete Comment", user_post_comment_path(@user, @post, comment), method: :delete, class: "btn btn-outline-secondary" %>
+                        <% end %>
                     <%end%>
                 </div>
             </div>  
