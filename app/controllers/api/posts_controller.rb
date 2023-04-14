@@ -1,6 +1,7 @@
 require 'jwt'
 class Api::PostsController < Api::ApplicationController
   before_action :find_user
+  
   def index
     if @user
       @posts = @user.posts.order(created_at: :asc)
